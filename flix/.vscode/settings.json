@@ -1,0 +1,11 @@
+{
+    "editor.codeActionsOnSave": ["source.fixAll.eslint"],
+    "editor.tabSize": 2,
+    "eslint.format.enable": true,
+    "eslint.validate": ["javascript"],
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "[javascript]": {
+      "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+  }
