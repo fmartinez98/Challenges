@@ -1,0 +1,48 @@
+appId: org.reactjs.native.example.fastned
+---
+- launchApp
+- scrollUntilVisible:
+    element:
+      id: 'home-item-79' # Flatlist Item
+    direction: DOWN
+- tapOn:
+    id: 'home-item-79' # Flatlist Item
+- scrollUntilVisible:
+    element:
+      id: 'details-spects-charge-button' # Scroll until the end of the screen
+    direction: DOWN
+- tapOn:
+    id: 'details-spects-help-button' # Press help button
+- stopApp
+
+# Had to re-lunch the app because go back on Maestro RN for iOS is not working
+- launchApp
+- scrollUntilVisible:
+    element:
+      id: 'home-header-filter-button'
+    direction: DOWN
+- tapOn:
+    id: 'home-header-filter-button' # Press filter button
+- tapOn:
+    id: 'filter-header-input' # Press on input
+- inputText: 'Ioniq' # Write some text
+- eraseText
+- hideKeyboard
+- stopApp
+
+# Had to re-lunch the app because go back on Maestro RN for iOS is not working
+- launchApp
+- tapOn:
+    id: 'home-header-details' # Navigate to details screen
+- scrollUntilVisible:
+    element:
+      id: 'details-spects-charge-button'
+    direction: DOWN
+- tapOn:
+    id: 'details-spects-charge-button' # Navigate to charging screen
+- tapOn:
+    id: 'charging-charge-button' # Start charging animation
+- extendedWaitUntil:
+    visible:
+      id: 'success-charging-animation'
+    timeout: 50000
